@@ -28,6 +28,7 @@ def delete_unused_images(report_file, image_dir, delete_files=True):
 
         if delete_files:
             [remove(pathjoin(image_dir, x)) for x in unused_images if exists(pathjoin(image_dir, x))]
+            print(f'Deleted all unused files in {image_dir}.')
 
 def set_selected_tex_file():
     root.selected_tex_file = filedialog.askopenfilename(initialdir="/", title="Select .tex file",
