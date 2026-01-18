@@ -1,0 +1,44 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#scrollContainer {
+  left: 25%;
+  top: 5%;
+  width: 50%;
+  height: 100%;
+  word-wrap: normal;
+}
+
+@media screen and (max-width: 812px) {
+
+  .wrapper {
+    width: 90%;
+  }
+  #scrollContainer {
+    left: 5%;
+    width: 90%;
+  }
+  #scrollContainer > h1 {
+    font-size: 30px;
+  }
+
+  #scrollContainer > hr {
+    width: 50px;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,9 +1,7 @@
-# latex-tools
-Tools for LaTeX editing
+# Graduation Thesis Template
+Just a LaTeX template for my graduation thesis
 
 
-## Functionality 1: Delete unused images 
-Keeps only the images that are contained inside the .tex file. Deletes everything else. 
-A space-management tool. Available as .exe file [link](/dist/delete_unused_images.exe).
+Compiled using command "PdfLaTe + Bib(la)te + PdfLaTeX (x2) + View Pdf" on TeXmaker + MikTeX
 
-![Demo example](/demo/delete.png)
+For details on the contents of the repository and a list of usefull tools, see https://foxelas.github.io/latex-doc-templates/
