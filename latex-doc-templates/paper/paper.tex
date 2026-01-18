@@ -1,0 +1,222 @@
+%\documentclass{intcov_report}
+\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Additions by foxelas  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{balance} 
+
+\usepackage{graphicx} % Required for including images
+\graphicspath{{img/}} % Location of the graphics files
+
+\usepackage{float} % to force figure positioning
+
+\usepackage{xcolor, soul}
+\sethlcolor{yellow}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage[T1]{fontenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts,amsmath,amssymb}
+\usepackage{textcomp} % for registered, trademark etc 
+
+% to do list
+\usepackage{enumitem}
+\newlist{todolist}{itemize}{2}
+\setlist[todolist]{label=$\square$}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\newcommand{\done}{\rlap{$\square$}{\raisebox{2pt}{\large\hspace{1pt}\cmark}}%
+\hspace{-2.5pt}}
+\newcommand{\wontfix}{\rlap{$\square$}{\large\hspace{1pt}\xmark}}
+
+
+
+\usepackage[parfill]{parskip}
+%\usepackage{titlesec} % an interface to sectioning commands
+\usepackage{enumitem}
+
+%\usepackage{xeCJK}
+%\setCJKsansfont{MS Mincho}
+%\setCJKsansfont{IPAGothic}
+%\setCJKmonofont{IPAGothic}
+
+\usepackage{amsmath}
+
+%\usepackage{caption}
+
+%\usepackage{underscore}
+
+\definecolor{BrilliantRed}      {RGB}{237, 41, 57} 	    % Red  VERY-Approx PANTONE RED
+\definecolor{Periwinkle}        {RGB}{136, 132, 213} 	% Periwinkle  Approximate PANTONE 2715
+\definecolor{Lavender}          {RGB}{240, 146, 205} 	% Lavender  Approximate PANTONE 223
+\definecolor{ForestGreen}       {RGB}{0, 105, 60} 	    % ForestGreen  Approximate PANTONE 349
+\definecolor{BrickRed}          {RGB}{170, 39, 47} 	    % BrickRed  Approximate PANTONE 1805
+\definecolor{NavyBlue}          {RGB}{0, 70, 173}       % NavyBlue  Approximate PANTONE 293
+
+
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+
+\usepackage[breaklinks, 
+			%colorlinks = true,
+            %linkcolor = Periwinkle,
+            %urlcolor  = Periwinkle,
+            %citecolor = Periwinkle,
+            %anchorcolor = Periwinkle
+            ]{hyperref} %produce hypertext links
+\usepackage{comment}
+\usepackage[author={Elena}]{pdfcomment}
+  
+\newcommand{\chk}[1]{{\color{BrickRed}{\textbf{Check:} #1}}}
+\newcommand{\rmv}[1]{{\color{NavyBlue}{\textbf{Remove:} #1}}}
+\newcommand{\rf}{{\color{ForestGreen}{\textbf{Ref}}}}
+\newcommand{\reph}[1]{{\color{NavyBlue}{\textbf{Rephrase:} #1}}}
+\newcommand{\dq}[1]{{\color{Lavender}{\textbf{Quote}}}\textit{ #1}}
+\newcommand{\cor}[1]{{\color{BrilliantRed}{\textbf{Cor}}}\textit{ #1}}
+
+
+\usepackage{orcidlink}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End of Additions by foxelas  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{blindtext}
+
+\begin{document}
+
+
+
+\title{(Tentative) ERERE 
+%*\\ 
+%{\footnotesize \textsuperscript{*}Note: Sub-titles are not captured in Xplore and should not be used}
+%\thanks{Identify applicable funding agency here. If none, delete this.}
+}
+
+\author{\IEEEauthorblockN{1\textsuperscript{st} Given Name Surname \orcidlink{0000-0000-0000-0000}}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{2\textsuperscript{nd} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{3\textsuperscript{rd} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{4\textsuperscript{th} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{5\textsuperscript{th} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+\and
+\IEEEauthorblockN{6\textsuperscript{th} Given Name Surname}
+\IEEEauthorblockA{\textit{dept. name of organization (of Aff.)} \\
+\textit{name of organization (of Aff.)}\\
+City, Country \\
+email address or ORCID}
+}
+
+
+\maketitle
+
+
+
+\begin{abstract}
+\blindtext
+\end{abstract}
+
+\begin{IEEEkeywords}
+component, formatting, style, styling, insert
+\end{IEEEkeywords}
+
+
+
+
+\section{Introduction}
+\subsection{Context}
+\par Citation as \cite{UserManual}.
+
+\par You can add pdf comments. Here we\pdfcomment[color=red,icon=Insert]{insert: miss} a word!
+You can do much more \pdfmarkupcomment[markup=Squiggly,color=green]{with pdfcomment}{move to the front}.
+This is a \pdfmarkupcomment[markup=StrikeOut,color=red]{stupid}{replace stupid with funny}  game!
+\pdfmarkupcomment[markup=Highlight,color=yellow]{Of course, you can highlight complete sentences.}{Highlight}
+This is very\pdfcomment[icon=Note,color=blue]{insert graphic!} interesting!
+
+\par \blindtext
+
+
+
+\subsection{Goal}
+\par \blindtext
+
+
+\subsection{Novelty}
+\par \blindtext
+
+
+
+\subsection{Expected Outcomes}
+\par \blindtext
+
+ 
+\section{Methods and Materials}
+\subsection{Data Sources}
+\par \blindtext
+
+\subsection{System Architecture}
+\par \blindtext
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\linewidth]{example-image-a}
+\caption{The proposed system architecture.}
+\end{figure}
+
+
+\section{Results}
+\par \blindtext
+
+
+\begin{figure*}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{example-image-b}
+\caption{Large figure.}
+\end{figure*}
+
+
+\section{Discussion}
+\subsection{Future Work}
+\par \blindtext
+
+\section{Conclusion}
+\par \blindtext
+
+
+
+%\newpage
+%\pagebreak
+\nocite{*}
+\bibliographystyle{ieeetr_fox}
+\bibliography{bibliography}
+
+\end{document}

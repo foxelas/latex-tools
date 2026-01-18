@@ -1,0 +1,58 @@
+\begin{appendices}
+
+{\let\cleardoublepage\relax}
+\appendix
+\chapter{}
+\section{Estimation}
+
+ \citeauthor*{ac} \cite{ac} 
+\blindtext  
+
+\begin{comment}
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=0.2\linewidth]{pixelnb.png}
+  \caption{The square neighborhood used for spatial denoising.}
+  \label{fig:lbpschem}
+\end{center}
+\end{figure}
+\end{comment} 
+
+\begin{equation}
+	\bar{\mathbf{c}} = \frac{1}{N}\sum_{c \in Nb(c_{ij}) }c 
+\end{equation}
+
+\begin{equation}
+	\mathbf{K}_{ij} = \frac{1}{N-1}\sum_{c \in Nb(c_{ij})}(c-\bar{c}_{ij})(c-\bar{c}_{ij})^T
+\end{equation}
+\noindent We denote the noiseless value of the same pixel as $\mathbf{c}_{ij}^{d}$. We can estimate the posterior probability of the noiseless pixel given the observed noise pixel $p(\mathbf{c}_{ij}^{d}|\mathbf{c}_{ij})$ taking into account the Bayesian theorem. Assuming normal distribution for the a priori probability of the noiseless value $p(\mathbf{c}_{ij}^{d})$ as $\mathbf{c}_{ij}^{d}\sim \mathcal{N} (\bar{\mathbf{c}}, \mathbf{K}_{ij})$ and likelihood $p(\mathbf{c}_{ij}|\mathbf{c}_{ij}^{d})$ with mean set as the noisy pixel value and covariance set as the additive noise covariance as $p(\mathbf{c}_{ij}|\mathbf{c}_{ij}^{d}) = \mathcal{N} (\mathbf{c}_{ij}, \mathbf{K}_{n})$, Bayesian theorem gives:
+\begin{align}
+	p(\mathbf{c}_{ij}^{d}|\mathbf{c}_{ij}) &= \frac{p(\mathbf{c}_{ij}^{d})p(\mathbf{c}_{ij}|\mathbf{c}_{ij}^{d})}{p(\mathbf{c}_{ij})} \nonumber \\
+		&= \mathcal{N} (\mathbf{W}_{ij}(\mathbf{c}_{ij}-\bar{\mathbf{c}})+\bar{\mathbf{c}}, \mathbf{K}_{ij} - \mathbf{W}_{ij}\mathbf{K}_{ij})
+\end{align}
+
+\blindtext  
+
+
+\section{Skin Conditions Included in the Study}
+\blindtext  
+
+\begin{table}[h!]
+\centering
+\caption{The skin conditions included in our dataset.}
+\label{tabl:diseases}
+	\begin{tabular}{l c c c c} 
+ 		\toprule %\hline
+ 		 Macropathology Diagnosis & Anatomical Location \\ [0.5ex] 
+ 		\midrule %\hline
+ 		one & Exposed skin \\
+ 		one & Exposed skin \\
+ 		\bottomrule %\hline
+	\end{tabular}
+\end{table} 
+
+\noindent \blindtext  
+ 
+
+
+\end{appendices}
